@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxPayer Records Management</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>TaxPayer Records Management</h1>
+        
+        <div class="form-container">
+            <h2>Add New TaxPayer</h2>
+            <form id="addTaxPayerForm">
+                <input type="text" id="tid" placeholder="TID" required>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <button type="submit">Add TaxPayer <i data-feather="user-plus"></i></button>
+            </form>
+        </div>
+
+        <div class="search-container">
+            <h2>Search TaxPayer</h2>
+            <div class="search-form">
+                <input type="text" id="searchTid" placeholder="Enter TID to search">
+                <button id="searchButton">Search <i data-feather="search"></i></button>
+            </div>
+            <div id="searchResult"></div>
+        </div>
+
+        <div class="list-container">
+            <h2>All TaxPayers</h2>
+            <button id="refreshButton">Refresh List <i data-feather="refresh-cw"></i></button>
+            <ul id="taxPayerList"></ul>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner">
+        <i data-feather="loader"></i>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
